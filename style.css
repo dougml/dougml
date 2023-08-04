@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color: white;
+    --bg-img: url(assets/bg-mobile.jpg);
+    --li-border-color: 1px solid rgba(255, 255, 255, 0.5);
+    --li-bg-color: rgba(255, 255, 255, 0.024);
+    --li-bg-color-hv:rgba(255, 255, 255, 0.274);
+     --icon-mode:url(assets/sun.svg);
+}
+
+.light{
+    --text-color: rgb(0, 0, 0);
+    --bg-img: url(assets/bg-mobile-light.jpg);
+    --li-border-color: 1px solid rgba(0, 0, 0, 0.5);
+    --li-bg-color:rgba(0, 0, 0, 0.098);
+    --li-bg-color-hv: rgba(255, 255, 255, 0.274);
+    --icon-mode: url(assets/moon-stars.svg);
+}
+
+body{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: var(--bg-img);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    
+}
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+#container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+
+}
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+
+}
+#profile img{
+    border-radius: 50%;
+    border: 3px solid rgb(42, 32, 32);
+    width: 112px;
+}
+#profile p{
+    padding: 8px;
+    font-weight: 500;
+}
+ul{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+ul li{
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--li-bg-color);
+    padding: 10px;
+    border: var(--li-border-color); 
+    border-radius: 10px;
+    list-style: none;
+    transition: .4s;
+}
+
+ul li:hover{
+    background-color: var(--li-bg-color-hv);
+}
+
+a{
+    text-decoration: none;
+}
+
+#social-links{
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+    font-size: 30px;
+}
+#icon{
+    font-size: 20px;
+}
+
+footer strong{
+    color: rgb(0, 0, 0);
+}
+footer{
+    margin-top: 15px;
+}
+#switch{
+    position: relative;
+}
+
+#switch button{
+    height: 35px;
+    width: 32px;
+    background: white var(--icon-mode) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--li-bg-color-hv);
+    border: var(--li-bg-color);
+    /* -webkit-backdrop-filter: blur(4px); */
+    border-radius: 9999px;
+    border: 1px solid rgb(94, 94, 94);
+}
