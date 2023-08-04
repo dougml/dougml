@@ -19,19 +19,20 @@
     --li-bg-color:rgba(0, 0, 0, 0.098);
     --li-bg-color-hv: rgba(255, 255, 255, 0.274);
     --icon-mode: url(assets/moon-stars.svg);
+    
 }
 
 body{
-
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background-image: var(--bg-img);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    
+    border: 1px solid red;
 }
 body *{
     font-family: 'Inter', sans-serif;
@@ -70,7 +71,7 @@ ul{
     gap: 11px;
 }
 ul li{
-    width: 360px;
+    width: 320px;
     display: flex;
     justify-content: center;
     background-color: var(--li-bg-color);
@@ -103,7 +104,7 @@ footer strong{
     color: rgb(0, 0, 0);
 }
 footer{
-    margin-top: 15px;
+    margin-top: 30px;
 }
 #switch{
     position: relative;
@@ -130,7 +131,16 @@ footer{
     height: 24px;
     background: var(--li-bg-color-hv);
     border: var(--li-bg-color);
-    /* -webkit-backdrop-filter: blur(4px); */
     border-radius: 9999px;
     border: 1px solid rgb(94, 94, 94);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-img: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-img: url(./assets/bg-desktop-light.jpg);
+  }
 }
