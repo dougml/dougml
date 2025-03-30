@@ -2,10 +2,10 @@
 
 ```json
 {
-  "descricao": "Analista de Sistemas | ITSM",
+  "descricao": "Desenvolvedor",
   "links": "https://dougml.github.io/dougml/",
   "localizacao": "SC, Brasil",
-  "interesses": ["Desenvolvimento Full-stack", "Redes de computadores"]
+  "interesses": ["Desenvolvimento Full-stack", "n8n", "Automação", "Javascritp", "SQL"]
 }
 ```
 
